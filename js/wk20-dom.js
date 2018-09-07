@@ -1,5 +1,5 @@
 /*
-1. Uncomment the following program. You should recognise it. Modify the program so that the feedback to the user is displayed in the <div id="feedback"></div> element of the HTML page. 
+1. Uncomment the following program. You should recognise it. Modify the program so that the feedback to the user is displayed in the <div id="feedback"></div> element of the HTML page.
 */
 /*
 let score=0;
@@ -15,7 +15,11 @@ if(capitalFrance==="Paris"){
 if(capitalGermany==="Berlin"){
     score++;
 }
+
 console.log(`Your score is ${score} out of 3`);
+const divElem = document.getElementById("feedback");
+const textNode = document.createTextNode(`Your score is ${score} out of 3`);
+divElem.appendChild(textNode);
 */
 
 
@@ -23,7 +27,6 @@ console.log(`Your score is ${score} out of 3`);
 2. Uncomment the following code. Again, you should recognise it. Test it works.
 Instead of displaying matching countries in the console, get the program to display the feedback in the HTML page.
 */
-
 /*
 class Country {
   constructor(name, capital, continent, population) {
@@ -48,18 +51,32 @@ const matchingCountries = countries.filter(function(country){
     return false;
 });
 
-console.log("Matching countries are:");
-matchingCountries.forEach(function(country){
-    console.log(country.name)
-})
+const divElem = document.getElementById("feedback");
+if(matchingCountries.length>0){
+  const textNode = document.createTextNode(`The matching countries are:`);
+  divElem.appendChild(textNode);
+
+  matchingCountries.forEach(function(country){
+      const newParagraph = document.createElement("p");
+      newParagraph.appendChild(document.createTextNode(country.name));
+      divElem.appendChild(newParagraph);
+  });
+}else{
+  const textNode = document.createTextNode(`No results`);
+  divElem.appendChild(textNode);
+}
+
 */
 
-/*
-3. Modify your answer to question 2 so that the program feeds back to the user if no matching countries are found e.g. 'No countries match your search term'. Again, the message should be displayed in the HTML page.  
-*/
+
 
 /*
-4. Re-write your answer to question 1 but think about how you can structure the program using an object to store the user answers and a number of different functions. Look below, apart from getUserAnswers() and quizApp(), the functions have been declared for you but they have no body(no code inside them). Add code inside the functions so the program works in the same way as question 1. 
+3. Modify your answer to question 2 so that the program feeds back to the user if no matching countries are found e.g. 'No countries match your search term'. Again, the message should be displayed in the HTML page.
+*/
+//see answer to question 2
+
+/*
+4. Re-write your answer to question 1 but think about how you can structure the program using an object to store the user answers and a number of different functions. Look below, apart from getUserAnswers() and quizApp(), the functions have been declared for you but they have no body(no code inside them). Add code inside the functions so the program works in the same way as question 1.
 */
 
 /*
@@ -73,7 +90,7 @@ class UserAnswers{
 
 function getUserAnswers()
 {
-	const capitalEngland=prompt("What is the capital of England");
+    const capitalEngland=prompt("What is the capital of England");
     const capitalFrance=prompt("What is the capital of France");
     const capitalGermany=prompt("What is the capital of Germany");
     const userAnswers = new UserAnswers(capitalEngland,capitalFrance,capitalGermany);
@@ -82,19 +99,31 @@ function getUserAnswers()
 
 function calcScore(userAnswers)
 {
-	//add code here to calculate a score and return it
+  let score=0;
+  if(userAnswers.capEngland==="London"){
+      score++;
+  }
+  if(userAnswers.capFrance==="Paris"){
+      score++;
+  }
+  if(userAnswers.capGermany==="Berlin"){
+      score++;
+  }
+  return score;
 }
 
 function displayFeedback(score)
 {
-	//add code here
+  const divElem = document.getElementById("feedback");
+  const textNode = document.createTextNode(`Your score is ${score} out of 3`);
+  divElem.appendChild(textNode);
 }
 
 function quizApp()
 {
-	const userAnswers = getUserAnswers();
-	const userScore = calcScore(userAnswers);
-	displayFeedback(userScore);
+    const userAnswers = getUserAnswers();
+    const userScore = calcScore(userAnswers);
+    displayFeedback(userScore);
 }
 quizApp(); //run the application
 */
