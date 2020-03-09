@@ -25,19 +25,12 @@ Instead of displaying matching countries in the console, get the program to disp
 */
 
 /*
-class Country {
-  constructor(name, capital, continent, population) {
-    this.name = name;
-    this.capital = capital;
-    this.continent = continent;
-    this.population = population;
-  }
-}
-const countries=[];
-countries.push(new Country( "England","London", "Europe", 53000000));
-countries.push(new Country( "USA","Washington", "N. America", 321000000));
-countries.push(new Country( "France","Paris", "Europe", 66900000));
-countries.push(new Country( "Japan","Tokyo", "Asia", 127000000));
+const countries=[
+    {name : "England", capital : "London", continent : "Europe", population: 53000000},
+    {name : "France", capital : "Paris", continent : "Europe", population: 67000000},
+    {name : "USA", capital : "Washington", continent : "N. America", population: 325000000},
+    {name : "Japan", capital : "Tokyo", continent : "Asia", population: 127000000}
+]
 
 const userContinent = prompt("Enter the name of a continent");
 
@@ -49,6 +42,7 @@ const matchingCountries = countries.filter(function(country){
 });
 
 console.log("Matching countries are:");
+
 matchingCountries.forEach(function(country){
     console.log(country.name)
 })
@@ -62,21 +56,12 @@ matchingCountries.forEach(function(country){
 4. Re-write your answer to question 1 but think about how you can structure the program using an object to store the user answers and a number of different functions. Look below, apart from getUserAnswers() and quizApp(), the functions have been declared for you but they have no body(no code inside them). Add code inside the functions so the program works in the same way as question 1. 
 */
 
-/*
-class UserAnswers{
-    constructor(capEngland,capFrance,capGermany) {
-        this.capEngland = capEngland;
-        this.capFrance = capFrance;
-        this.capGermany = capGermany;
-    }
-}
-
 function getUserAnswers()
 {
-	const capitalEngland=prompt("What is the capital of England");
+    const capitalEngland=prompt("What is the capital of England");
     const capitalFrance=prompt("What is the capital of France");
     const capitalGermany=prompt("What is the capital of Germany");
-    const userAnswers = new UserAnswers(capitalEngland,capitalFrance,capitalGermany);
+    const userAnswers = {capEngland:capitalEngland,capFrance:capitalFrance,capGermany:capitalGermany}
     return userAnswers;
 }
 
@@ -96,5 +81,6 @@ function quizApp()
 	const userScore = calcScore(userAnswers);
 	displayFeedback(userScore);
 }
+
 quizApp(); //run the application
-*/
+
