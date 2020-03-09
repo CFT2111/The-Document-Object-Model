@@ -1,5 +1,5 @@
 /*
-1. Uncomment the following program. You should recognise it. Modify the program so that the feedback to the user is displayed in the <div id="feedback"></div> element of the HTML page. 
+1. Uncomment the following program. You should recognise it. Modify the program so that the feedback to the user is displayed in the <div id="feedback"></div> element of the HTML page. (Slide 15)
 */
 /*
 let score=0;
@@ -21,7 +21,7 @@ console.log(`Your score is ${score} out of 3`);
 
 /*
 2. Uncomment the following code. Again, you should recognise it. Test it works.
-Instead of displaying matching countries in the console, get the program to display the feedback in the HTML page.
+Instead of displaying matching countries in the console, get the program to display the feedback in the HTML page (Slide 16).
 */
 
 /*
