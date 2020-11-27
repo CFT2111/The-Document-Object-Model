@@ -54,9 +54,10 @@ matchingCountries.forEach(function(country){
 */
 
 /*
-4. Re-write your answer to question 1 but think about how you can structure the program using an object to store the user answers and a number of different functions. Look below, apart from getUserAnswers() and quizApp(), the functions have been declared for you but they have no body(no code inside them). Add code inside the functions so the program works in the same way as question 1.
+4. Re-write your answer to question 1 but think about how you can structure the program using an object to store the user answers and a number of different functions. Look below, apart from getUserAnswers() and quizApp(), the functions have been declared for you but they have no body(no code inside them). Uncomment the code and add code inside the functions so the program works in the same way as question 1.
 */
 
+/*
 function getUserAnswers()
 {
     const capitalEngland=prompt("What is the capital of England");
@@ -84,3 +85,4 @@ function quizApp()
 }
 
 quizApp(); //run the application
+*/
