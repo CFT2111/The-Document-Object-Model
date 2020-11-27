@@ -1,6 +1,7 @@
 /*
-1. Uncomment the following program. You should recognise it. Modify the program so that the feedback to the user is displayed in the <div id="feedback"></div> element of the HTML page. (Slide 15)
+1. Uncomment the following program. You should recognise it. Modify the program so that the feedback to the user is displayed in the <div id="feedback"></div> element of the HTML page. (Slide 13)
 */
+
 /*
 let score=0;
 const capitalEngland=prompt("What is the capital of England");
@@ -21,7 +22,7 @@ console.log(`Your score is ${score} out of 3`);
 
 /*
 2. Uncomment the following code. Again, you should recognise it. Test it works.
-Instead of displaying matching countries in the console, get the program to display the feedback in the HTML page (Slide 16).
+Instead of displaying matching countries in the console, get the program to display the feedback in the HTML page (Slide 14).
 */
 
 /*
@@ -49,11 +50,11 @@ matchingCountries.forEach(function(country){
 */
 
 /*
-3. Modify your answer to question 2 so that the program feeds back to the user if no matching countries are found e.g. 'No countries match your search term'. Again, the message should be displayed in the HTML page.  
+3. Modify your answer to question 2 so that the program feeds back to the user if no matching countries are found e.g. 'No countries match your search term'. Again, the message should be displayed in the HTML page.
 */
 
 /*
-4. Re-write your answer to question 1 but think about how you can structure the program using an object to store the user answers and a number of different functions. Look below, apart from getUserAnswers() and quizApp(), the functions have been declared for you but they have no body(no code inside them). Add code inside the functions so the program works in the same way as question 1. 
+4. Re-write your answer to question 1 but think about how you can structure the program using an object to store the user answers and a number of different functions. Look below, apart from getUserAnswers() and quizApp(), the functions have been declared for you but they have no body(no code inside them). Add code inside the functions so the program works in the same way as question 1.
 */
 
 function getUserAnswers()
@@ -83,4 +84,3 @@ function quizApp()
 }
 
 quizApp(); //run the application
-
