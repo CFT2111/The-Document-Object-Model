@@ -2,7 +2,7 @@
 1. Uncomment the following program. You should recognise it. Modify the program so that the feedback to the user is displayed in the <div id="feedback"></div> element of the HTML page. (Slide 13)
 */
 
-/*
+
 let score=0;
 const capitalEngland=prompt("What is the capital of England");
 const capitalFrance=prompt("What is the capital of France");
@@ -18,13 +18,8 @@ if(capitalGermany==="Berlin"){
 }
 
 console.log(`Your score is ${score} out of 3`);
-
-
-
 const divElem = document.getElementById("feedback");
 divElem.textContent = `Your score is ${score} out of 3`;
-
-*/
 
 /*
 2. Uncomment the following code. Again, you should recognise it. Test it works.
@@ -50,8 +45,7 @@ const matchingCountries = countries.filter(function(country){
 
 const divElem = document.getElementById("feedback");
 if(matchingCountries.length>0){
-  const textNode = document.createTextNode(`The matching countries are:`);
-  divElem.appendChild(textNode);
+  divElem.textContent = `The matching countries are:`
   matchingCountries.forEach(function(country){
       const newParagraph = document.createElement("p");
       newParagraph.textContent = country.name;
