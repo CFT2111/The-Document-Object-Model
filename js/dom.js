@@ -18,11 +18,13 @@ if(capitalGermany==="Berlin"){
 }
 
 console.log(`Your score is ${score} out of 3`);
-const divElem = document.getElementById("feedback");
-const textNode = document.createTextNode(`Your score is ${score} out of 3`);
-divElem.appendChild(textNode);
-*/
 
+
+
+const divElem = document.getElementById("feedback");
+divElem.textContent = `Your score is ${score} out of 3`;
+
+*/
 
 /*
 2. Uncomment the following code. Again, you should recognise it. Test it works.
@@ -52,12 +54,11 @@ if(matchingCountries.length>0){
   divElem.appendChild(textNode);
   matchingCountries.forEach(function(country){
       const newParagraph = document.createElement("p");
-      newParagraph.appendChild(document.createTextNode(country.name));
+      newParagraph.textContent = country.name;
       divElem.appendChild(newParagraph);
   });
 }else{
-  const textNode = document.createTextNode(`No results`);
-  divElem.appendChild(textNode);
+  divElem.textContent = `No results`
 }
 
 */
@@ -100,9 +101,8 @@ function calcScore(userAnswers)
 
 function displayFeedback(score)
 {
-  const divElem = document.getElementById("feedback");
-  const textNode = document.createTextNode(`Your score is ${score} out of 3`);
-  divElem.appendChild(textNode);
+   const divElem = document.getElementById("feedback");
+   divElem.textContent = `Your score is ${score} out of 3`;
 }
 
 function quizApp()
